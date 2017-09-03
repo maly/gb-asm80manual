@@ -1,6 +1,6 @@
 ## Machine type {#machine-type}
 
-Right CPU is determined by file name extension, or by [.engine directive](/directives.md). File name extensions are:
+Right CPU is determined by file name extension, or by [.engine directive](/directives.md). Supported file name extensions are:
 
 * Intel 8080: .A80
 * Zilog Z80: .Z80
