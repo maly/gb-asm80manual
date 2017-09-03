@@ -19,5 +19,7 @@
 * **LDA A or LDAA?**
   Use literally what you want to use. Compiler internally transfer all of these instructions into long syntax \(without a space\), so LDA A becomes LDAA etc.
 
+## {#generic-emulators}
+
 
 
