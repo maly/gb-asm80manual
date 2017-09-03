@@ -17,6 +17,9 @@
 | ds \(aliases: defm, defs, rmb\) | Define Space. Take one argument, which is the amount of space to define, in bytes. |
 | fill _value, length_ | Fill memory with a value. Take two arguments, the first is a value, the second is length of filled block \(byte count\). |
 | bsz _length_\(alias: zmb\) | Fill memory with a given count of zeros. |
+| .cstr | When you need write a zero-ended string (C style), you can use `DB "Hello",0` - or simple `.cstr "Hello"` |
+| .pstr | Similar as .cstr, but there is no trailing zero. .pstr is a Pascal-style string: first byte is length, then string. So `.pstr "Hello"` is equal to `DB 5, "Hello"`. |
+| .istr | Strings are often defined as simple ASCII, where the last byte has bit 7 set to 1. So `.istr "Hello"` is the same as `DB "Hell","o"+0x80` |
 | .include _filename_ | Include a file. The file is readed and the result is the same as if the file were copied in the current file instead of the INCLUDE line. The file included may contain INCLUDE directives, and so on. INCLUDE directives are processed before the assembly phases, so the use of IF directives to conditionally include different files is not allowed. |
 | .incbin _filename_ | Include a binary file. No parsing, no compiling, just a bunch of DBs. |
 | **Code control** |
