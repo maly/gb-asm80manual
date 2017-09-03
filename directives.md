@@ -17,6 +17,7 @@
 | fill _value, length_ | Fill memory with a value. Take two arguments, the first is a value, the second is length of filled block \(byte count\). |
 | bsz _length_\(alias: zmb\) | Fill memory with a given count of zeros. |
 | .include _filename_ | Include a file. The file is readed and the result is the same as if the file were copied in the current file instead of the INCLUDE line. The file included may contain INCLUDE directives, and so on. INCLUDE directives are processed before the assembly phases, so the use of IF directives to conditionally include different files is not allowed. |
+| .incbin _filename_ | Include a binary file. No parsing, no compiling, just a bunch of DBs. |
 | **Code control** |
 | org _addr_ | ORiGin. Establishes the origin position where to place generated code. Several ORG directives can be used in the same program, but if the result is that code generated overwrites previous, the result is undefined. |
 | .ent _addr_ | ENTer point for debugging. I.e. **.ent $** |
