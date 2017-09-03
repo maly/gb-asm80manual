@@ -4,7 +4,7 @@
 | :--- | :--- |
 |  **Output controls** |
 | .cpu | Select CPU type. Available values are: 8080, Z80, 6502, M6800, CDP1802, M6809, C65816 |
-| .engine | Controls machine type for emulation \(only in online[ASM80](https://www.asm80.com/)\). Available values are: PMI, PMD, JPR, KIM, SBCZ80, SBC6502, SBC09, ZXS and CPM |
+| .engine | Controls machine type for emulation \(only in online [ASM80](https://www.asm80.com/)\). Available values are: PMI, PMD, JPR, KIM, SBCZ80, SBC6502, SBC09, ZXS and CPM |
 | .pragma sna | Makes SNA file instead of HEX \(only for Z80\) |
 | .pragma tap | Makes TAP file instead of HEX \(only for Z80\) |
 | .pragma prg | Makes C64's PRG file instead of HEX \(only for 6502\) \[[read more](https://www.uelectronics.info/2015/04/10/asm80-news-cpm-c64-etc/)\]  .PRAGMA PRG ;says “make .PRG instead of .HEX” .ORG $0810 ;or higher .ENT $ ;for “enter here” |
@@ -19,12 +19,12 @@
 | .include _filename_ | Include a file. The file is readed and the result is the same as if the file were copied in the current file instead of the INCLUDE line. The file included may contain INCLUDE directives, and so on. INCLUDE directives are processed before the assembly phases, so the use of IF directives to conditionally include different files is not allowed. |
 | **Code control** |
 | org _addr_ | ORiGin. Establishes the origin position where to place generated code. Several ORG directives can be used in the same program, but if the result is that code generated overwrites previous, the result is undefined. |
-| .ent _addr_ | ENTer point for debugging. I.e.**.ent $** |
+| .ent _addr_ | ENTer point for debugging. I.e. **.ent $** |
 | .align _N_ | The .align directive causes the next data generated to be aligned modulo N bytes. |
 | .phase _addr_ | Continue to produce code and data for loading at the current address but assemble instructions and define labels as if they originated at the given address. Useful when producing code that will be copied to a different location before being executed. |
 | .dephase | End phase block. |
 |  **Preprocessor** |
-| equ \(alias: =\) | EQUate. Must be preceded by a label. The argument must be a numeric expression, the result is assigned to the label. I.e.**VIDRAM equ $4000** |
+| equ \(alias: =\) | EQUate. Must be preceded by a label. The argument must be a numeric expression, the result is assigned to the label. I.e. **VIDRAM equ $4000** |
 |  **Conditional blocks** |
 | .if _cond_ | Contional assembly. The argument must be a numeric expression, a result of 0 is considered as false, any other as true. If the argument is true the following code is assembled until the end of the IF section is encountered, else is ignored. The IF section is ended with a ENDIF directive. IF can't be nested. |
 | .ifn _cond_ | IF NOT |
