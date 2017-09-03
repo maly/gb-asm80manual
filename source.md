@@ -1,6 +1,6 @@
 ## Source code format. {#source-code-format}
 
-Line can begin with a label. Label should be followed by ":", but it can be omitted.
+Line can begin with a label. Label should be followed by ":", but colon can be omitted.
 
 Everything after a ; in a line is a comment \(unless the ; is part of a string literal, of course\). There are no multiline comments.
 
@@ -12,29 +12,29 @@ Blanks are significative only in string literals and when they separate lexical 
 
 Numeric literals can be written in decimal, binary, octal and hexadecimal formats. Several formats are accepted to obtain compatibility with the source format of several assemblers.
 
-A literal that begins with $ is a hexadecimal constant, except if the literal is only the $ symbol.
+- A literal that begins with $ is a hexadecimal constant, except if the literal is only the $ symbol.
 
-A literal that begins with % is a binary constant, except if the literal is only the % symbol, in that case, is an operator.
+- A literal that begins with % is a binary constant, except if the literal is only the % symbol, in that case, is an operator.
 
-A literal that begins with a decimal digit can be a decimal, binary, octal or hexadecimal. If the digit is 0 and the following character is an X, the number is hexadecimal. If not, the suffix of the literal is examined: D means decimal, B binary, H hexadecimal and O or Q octal, in any other case, is taken as a decimal. Take care, FFFFh, for example, is not a hexadecimal constant, is an identifier, to write it with the suffix notation you must do it as 0FFFFh.
+- A literal that begins with a decimal digit can be a decimal, binary, octal or hexadecimal. If the digit is 0 and the following character is an X, the number is hexadecimal. If not, the suffix of the literal is examined: D means decimal, B binary, H hexadecimal and O or Q octal, in any other case, is taken as a decimal. Take care, `FFFFh`, for example, is not a hexadecimal constant, is an identifier, to write it with the suffix notation you must do it as `0FFFFh`.
 
 ### String literals
 
-There is one format of string literals. They should be double quote delimited. Assembler can parse single quote form too, but it should produce an error, when delimitation is used in string, so please use double quotes.
+There is one format of string literals. They should be double quote delimited. _Assembler can parse single quote form too, but it should produce an error, when delimitation is used in string, so please use double quotes._
 
-A string literal of length 1 can be used as a numeric constant with the numeric value of the character contained. This allows expressions such as 'A' + 80h to be evaluated as expected.
+A string literal of length 1 can be used as a numeric constant with the numeric value of the character contained. This allows expressions such as `'A' + 80h` to be evaluated as expected.
 
 ### Identifiers
 
 Identifiers are the names used for labels, EQU symbols and macro names and parameters. The names of the CPU mnemonics, registers, and flag names, and of assembling directives are reserved and can not be used as names of identifiers. Reserved names are case insensitive, even if case sensitive mode is used.
 
-Identifiers are not case sensitive. Internally are converted to uppercase
+Identifiers are not case sensitive. Internally are converted to uppercase.
 
 ### Expressions
 
-Parser can evaluate simple math expressions, with all of the common operators, like +, -, /, \*, \# \(modulo\). You can use identifiers as a variables too, e.g. "LOOP + 3".
+Parser can evaluate simple math expressions, with all of the common operators, like +, -, /, \*, \# \(modulo\). You can use identifiers as a variables too, e.g. `LOOP + 3`.
 
-There are some specials here, like string repetitions \("A"\*3 produces "AAA"\) or upper / lower part of identifier value. If LOOP is 0x1234, then &lt;LOOP means 0x34, &gt;LOOP means 0x12
+There are some specials here, like string repetitions \(`"A"\*3` produces `"AAA"`\) or upper / lower part of identifier value. If LOOP is 0x1234, then &lt;LOOP means 0x34, &gt;LOOP means 0x12
 
 ##  {#machine-type}
 

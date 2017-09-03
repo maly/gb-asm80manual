@@ -9,7 +9,7 @@
 | .pragma tap | Makes TAP file instead of HEX \(only for Z80\) |
 | .pragma prg | Makes C64's PRG file instead of HEX \(only for 6502\) \[[read more](https://www.uelectronics.info/2015/04/10/asm80-news-cpm-c64-etc/)\]  .PRAGMA PRG ;says “make .PRG instead of .HEX” .ORG $0810 ;or higher .ENT $ ;for “enter here” |
 | .pragma com | Makes CP/M COM file instead of HEX \(only for Z80/8080\) \[[read more](https://www.uelectronics.info/2015/04/10/asm80-news-cpm-c64-etc/)\] |
-| .pragma html | Makes HTML listing \(instead of LPT\) |
+| .pragma html | Makes HTML listing \(instead of LST\) |
 |  **Data definition** |
 | db \(aliases: defb, fcb\) | Define Byte. The argument is a comma separated list of string literals or numeric expressions. The string literals are inserted in the object code, and the result of the numeric expression is inserted as a single byte, truncating it if needed. You can use DUP for entering N same values: DB 10 DUP \(123\) means "10 times value 123" |
 | dw \(aliases: defw, fdb\) | Define Word. The argument is a comma separated list of numeric expressions. Each numeric expression is evaluated as a two byte word and the result inserted in the proper "endianity". You can use DUP for entering N same values: DW 10 DUP \(123\) means "10 times value 123" |
