@@ -30,8 +30,8 @@
 | .ifn_cond_ | IF NOT |
 | .endif | End of the IF block |
 |  **Macros and blocks** |
-| .macro_macro\_name_ | Defines a macro, see [the chapter about macros](macros.md). |
-| .rept_count_ | Repeat a block of code substituing arguments. See [the chapter about macros](macros.md). |
+| .macro_macro\_name_ | Defines a macro, see [the chapter about macros](/macros.md). |
+| .rept_count_ | Repeat a block of code substituing arguments. See [the chapter about macros](/macros.md). |
 | .endm | End of MACRO definition or REPT cycle. |
 | .block | Start of logical block. All labels, defined in this block, are local. It means you can’t reference them from outside the block. If you want to define a label globally, simply prefix it with ‘@’, like @LABEL: Good idea is to enclose INCLUDEd code into block. |
 | .endblock | End of BLOCK. |
