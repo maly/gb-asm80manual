@@ -1,3 +1,5 @@
+## Generic Emulators {#generic-emulators}
+
 Barebone emulator, or “generic emulator”, is a customizable emulator of CPU + memory + serial terminal. You can configure it by simple config file. Let’s long story short…
 
 First of all, prepare a config file, e.g. “mycomputer.emu”. Extension “.emu” is mandatory. File should contain this:
