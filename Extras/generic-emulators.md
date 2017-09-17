@@ -28,8 +28,8 @@ terminal.caps 1
 Format is really simple: Each line contains one directive. Lines with “;” at the same beginning are comments. Here are parameters:
 
 | parameter | value (case sensitive) |
-| cpu | can be “I8080”, “Z80” or “C6502” |
 | :--- | :--- |
+| cpu | can be “I8080”, “Z80” or “C6502” |
 | memory.ram.from | starting address for RAM \(please follow the 0x… convention for hexadecimal numbers\) |
 | memory.ram.to | last address of RAM |
 | memory.rom.from, memory.rom.to | Same as above, but for ROM \(your source code should lays here\) |
