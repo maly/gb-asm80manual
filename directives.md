@@ -3,7 +3,7 @@
 | Directive | Meanings |
 | :--- | :--- |
 |  **Output controls** |
-| .cpu | Select CPU type. Available values are: 8080, Z80, 6502, M6800, CDP1802, M6809, C65816 |
+| .cpu | Select CPU type. Available values are: 8080, 8008, Z80, 6502, M6800, CDP1802, M6809, C65816 |
 | .engine | Controls machine type for emulation \(only in online [ASM80](https://www.asm80.com/)\). Available values are: PMI, PMD, JPR, KIM, SBCZ80, SBC6502, SBC09, ZXS and CPM |
 | .pragma sna | Makes SNA file instead of HEX \(only for Z80\) |
 | .pragma tap | Makes TAP file instead of HEX \(only for Z80\) |
