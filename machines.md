@@ -3,6 +3,7 @@
 Right CPU is determined by file name extension, or by [.engine directive](/directives.md). Supported file name extensions are:
 
 * Intel 8080: .A80
+* Intel 8008: .A08
 * Zilog Z80: .Z80
 * Motorola 6800: .A68
 * Motorola 6809: .A09
