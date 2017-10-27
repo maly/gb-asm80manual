@@ -9,8 +9,10 @@ Summary
 * [Macros](macros.md)
 * [Procesor-specific syntax](Extras/procesor-specific-syntax.md)
 * [Generic Emulators](Extras/generic-emulators.md)
-* [IDE: Workspaces](/Extras/workspaces.md)
-* [IDE: GitHub integration](/Extras/github.md)
-
+* IDE stuff
+ * [IDE: Workspaces](/Extras/workspaces.md)
+ * [IDE: GitHub integration](/Extras/github.md)
+* Misc stuff
+ * [How to generate a C64 .prg](/Extras/c64.md)
 
 
