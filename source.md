@@ -14,8 +14,6 @@ Numeric literals can be written in decimal, binary, octal and hexadecimal format
 
 * A literal that begins with $ is a hexadecimal constant, except if the literal is only the $ symbol.
 
-* A literal that begins with % is a binary constant, except if the literal is only the % symbol, in that case, is an operator.
-
 * A literal that begins with a decimal digit can be a decimal, binary, octal or hexadecimal. If the digit is 0 and the following character is an X, the number is hexadecimal. If not, the suffix of the literal is examined: D means decimal, B binary, H hexadecimal and O or Q octal, in any other case, is taken as a decimal. Take care, `FFFFh`, for example, is not a hexadecimal constant, is an identifier, to write it with the suffix notation you must do it as `0FFFFh`.
 
 ### String literals
