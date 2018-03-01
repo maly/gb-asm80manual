@@ -1,5 +1,5 @@
 {
-    "plugins": ["toc", "theme-vuejs"],
+    "plugins": ["toc", "theme-vuejs-2"],
     "pluginsConfig": {
         "toc": {
             "addClass": true,
