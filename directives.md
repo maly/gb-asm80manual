@@ -11,8 +11,8 @@
 | .pragma com | Makes CP/M COM file instead of HEX \(only for Z80/8080\) \[[read more](https://www.uelectronics.info/2015/04/10/asm80-news-cpm-c64-etc/)\] |
 | .pragma html | Makes HTML listing \(instead of LST\) |
 | .pragma segment | Make separate HEX files for cseg, dseg and eseg \(without this pragma are all of them in one HEX\) |
-| .binfrom _addr_ | Starting address for binary download _(Only valid for "Download BIN" function in IDE)_ |
-| .binto _addr_ | Last address for binary download (this address WILL NOT BE INCLUDED in binary file) _(Only valid for "Download BIN" function in IDE)_ |
+| .binfrom _addr_ | Starting address for binary download, default is 0. _(Only valid for "Download BIN" function in IDE)_ |
+| .binto _addr_ | Last address for binary download (this address WILL NOT BE INCLUDED in binary file) Default is 65536. _(Only valid for "Download BIN" function in IDE)_ |
 | .error _message_ | Throws an error during compile phase. |
 |  | **Data definition** |
 | db \(aliases: defb, fcb\) | Define Byte. The argument is a comma separated list of string literals or numeric expressions. The string literals are inserted in the object code, and the result of the numeric expression is inserted as a single byte, truncating it if needed. You can use DUP for entering N same values: DB 10 DUP \(123\) means "10 times value 123" |
