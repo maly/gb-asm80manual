@@ -34,9 +34,19 @@ Parser can evaluate simple math expressions, with all of the common operators, l
 
 There are some specials here, like string repetitions \(`"A"\*3` produces `"AAA"`\) or upper / lower part of identifier value. If LOOP is 0x1234, then &lt;LOOP means 0x34, &gt;LOOP means 0x12
 
+### Math operators
+
+| Operator | Meaning |
+| :--- | :--- |
+| +, - | Arithmetic add, subtract |
+| \*, / | Arithmetic multiply, divide |
+| \#, % | Arithmetic modulo \(the remainer of division\) - equivalent operators |
+| ^ | Power \(2^5 = 32\) |
+| , | Append operands |
+| &, \| | Binary and, or |
+| \|\| | String concatenation |
+
 ### Listing
 
-For each compiled file the listing \(.lst\) is generated. You can see all lines with their addresses and opcodes. At the bottom is all variables dump as well as cross-reference \(where is given variable defined and where is used\) 
-
-
+For each compiled file the listing \(.lst\) is generated. You can see all lines with their addresses and opcodes. At the bottom is all variables dump as well as cross-reference \(where is given variable defined and where is used\)
 
