@@ -36,15 +36,15 @@ There are some specials here, like string repetitions \(`"A"*3` produces `"AAA"`
 
 ### Math operators
 
-| Operator | Meaning |
-| :--- | :--- |
-| +, - | Arithmetic add, subtract |
-| \*, / | Arithmetic multiply, divide |
-| \#, % | Arithmetic modulo \(the remainer of division\) - equivalent operators |
-| ^ | Power \(2^5 = 32\) |
-| , | Append operands |
-| &, `|` | Binary and, or |
-| `||` | String concatenation |
+<table><tr><th>Operator</th><th>Meaning</th></tr>
+<tr><td> +, - </td><td> Arithmetic add, subtract </td></tr>
+<tr><td> \*, / </td><td> Arithmetic multiply, divide</td></tr>
+<tr><td> \#, % </td><td> Arithmetic modulo \(the remainer of division\) - equivalent operators</td></tr>
+<tr><td> ^ </td><td> Power \(2^5 = 32\)</td></tr>
+<tr><td> , </td><td> Append operands</td></tr>
+<tr><td> &, | </td><td> Binary and, or</td></tr>
+<tr><td> || </td><td> String concatenation</td></tr>
+</table>
 
 ### Listing
 
