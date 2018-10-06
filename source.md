@@ -32,19 +32,22 @@ Identifiers are not case sensitive. Internally are converted to uppercase.
 
 Parser can evaluate simple math expressions, with all of the common operators, like +, -, /, \*, \# \(modulo\). You can use identifiers as a variables too, e.g. `LOOP + 3`.
 
-There are some specials here, like string repetitions \(`"A"*3` produces `"AAA"`\) or upper / lower part of identifier value. If LOOP is 0x1234, then &lt;LOOP means 0x34, &gt;LOOP means 0x12
+There are some specials here, like string repetitions \(`"A"\*3` produces `"AAA"`\) or upper / lower part of identifier value. If LOOP is 0x1234, then &lt;LOOP means 0x34, &gt;LOOP means 0x12
 
 ### Math operators
 
-<table><tr><th>Operator</th><th>Meaning</th></tr>
-<tr><td> +, - </td><td> Arithmetic add, subtract </td></tr>
-<tr><td> \*, / </td><td> Arithmetic multiply, divide</td></tr>
-<tr><td> \#, % </td><td> Arithmetic modulo \(the remainer of division\) - equivalent operators</td></tr>
-<tr><td> ^ </td><td> Power \(2^5 = 32\)</td></tr>
-<tr><td> , </td><td> Append operands</td></tr>
-<tr><td> &, | </td><td> Binary and, or</td></tr>
-<tr><td> || </td><td> String concatenation</td></tr>
-</table>
+| Operator | Meaning |
+| :--- | :--- |
+| +, - | Arithmetic add, subtract |
+| \*, / | Arithmetic multiply, divide |
+| \#, % | Arithmetic modulo \(the remainer of division\) - equivalent operators |
+| ^ | Power \(2^5 = 32\) |
+| , | Append operands |
+| &, \| | Binary and, or |
+| \|\| | String concatenation |
+| =, !=, >, <, >=, <= | Relative operators |
+
+
 
 ### Listing
 
