@@ -45,7 +45,7 @@ There are some specials here, like string repetitions \(`"A"\*3` produces `"AAA"
 | , | Append operands |
 | &, \| | Binary and, or |
 | \|\| | String concatenation |
-| =, !=, >, <, >=, <= | Relative operators |
+| =, !=, ?>, ?<, ?>=, ?<= | Relative operators |
 
 
 
