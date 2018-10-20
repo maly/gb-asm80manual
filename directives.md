@@ -50,6 +50,8 @@
 | .dseg | Following source code is a data \(data segment\) |
 | .eseg | Following source code belongs to third segment \(extended\) |
 | .bsseg | Following source code is a not-initialized segment. ASM allows only DS and such directives, which does not generate any content |
+|  | **6809 directives** |
+| setdp | Allows the user to set which memory page the assembler will use for the direct page addressing mode.  if "SETDP $D0" is encountered, the assembler will then use direct addressing for any address in the range of $D000 to $D0FF. _This directive does not actually affect the contents of the direct page register._ |
 |  | **65816 directives** |
 | .m8 | Accumulator is 8bit |
 | .m16 | 16bit accumulator |
