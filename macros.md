@@ -20,6 +20,22 @@ will generate this:
    0001 27    DAA
 ```
 
+### Local labels
+
+Macros has no local label mechanism. So if you define a label in a macro, it unrolls to the same label, ending with a "redefine label" error message.
+
+There is a workaround to define unique label for each macro unrolling:
+
+```
+.macro xyz
+loop%%M: inc a
+   dec b
+   jr nz,loop%%M
+.endm
+```
+
+Now it is safe to use this macro repeatedly, because special placeholder "%%M" is replaced by string "M_"+line number. It provides a good enough workaround for local labels.
+
 ##  {#processor-specific-syntax}
 
 
