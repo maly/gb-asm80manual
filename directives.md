@@ -5,7 +5,6 @@
 |  | **Output controls** |
 | .cpu | Select CPU type. Available values are: 8080, 8008, Z80, 6502, M6800, CDP1802, M6809, C65816 |
 | .engine | Controls machine type for emulation \(only in online [ASM80](https://www.asm80.com/)\). Available values are: PMI, PMD, JPR, KIM, SBCZ80, SBC6502, SBC09, ZXS and CPM |
-| .pragma 6309 | Enables HD6309 added instructions in the 6809 assembler sources |
 | .pragma srec | Makes S19 file in addition to the HEX |
 | .pragma sna | Makes SNA file instead of HEX \(only for Z80\) |
 | .pragma tap | Makes TAP file instead of HEX \(only for Z80\) |
@@ -53,6 +52,7 @@
 | .bsseg | Following source code is a not-initialized segment. ASM allows only DS and such directives, which does not generate any content |
 |  | **6809 directives** |
 | setdp | Allows the user to set which memory page the assembler will use for the direct page addressing mode.  if "SETDP $D0" is encountered, the assembler will then use direct addressing for any address in the range of $D000 to $D0FF. _This directive does not actually affect the contents of the direct page register._ |
+| .pragma 6309 | Enables HD6309 added instructions in the 6809 assembler sources |
 |  | **65816 directives** |
 | .m8 | Accumulator is 8bit |
 | .m16 | 16bit accumulator |
