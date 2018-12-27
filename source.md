@@ -47,6 +47,25 @@ There are some specials here, like string repetitions \(`"A"\*3` produces `"AAA"
 | \|\| | String concatenation |
 | =, !=, ?>, ?<, ?>=, ?<= | Relative operators |
 
+### Functions
+
+| Function | Meaning |
+| :--- | :--- |
+| isnear(x) | 1 if x is in range [-128;127], 0 otherwise 
+| lsb(x) | Least significant byte
+| msb(x) | Most significant byte
+
+```
+.macro jeq
+ .if isnear(%%1-$)
+  beq %%1
+ .else
+  bne $+5
+  jmp %%1
+ .endif
+.endm
+```
+
 
 
 ### Listing
