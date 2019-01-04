@@ -25,6 +25,7 @@
 | .pstr | Similar as .cstr, but there is no trailing zero. .pstr is a Pascal-style string: first byte is length, then string. So `.pstr "Hello"` is equal to `DB 5, "Hello"`. |
 | .istr | Strings are often defined as simple ASCII, where the last byte has bit 7 set to 1. So `.istr "Hello"` is the same as `DB "Hell","o"+0x80` |
 | .include _filename_ | Include a file. The file is readed and the result is the same as if the file were copied in the current file instead of the INCLUDE line. The file included may contain INCLUDE directives, and so on. INCLUDE directives are processed before the assembly phases, so the use of IF directives to conditionally include different files is not allowed. |
+| .include _filename/block_ | Include a part of a file, or better say: the block with given name from a file. The file is searched for the _.block name ... .endblock_ sequence. and the result is the same as if the block were copied in the current file instead of the INCLUDE line. |
 | .incbin _filename_ | Include a binary file. No parsing, no compiling, just a bunch of DBs. |
 |  | **Code control** |
 | org _addr_ | ORiGin. Establishes the origin position where to place generated code. Several ORG directives can be used in the same program, but if the result is that code generated overwrites previous, the result is undefined. |
@@ -42,7 +43,7 @@
 | .macro _macro\_name_ | Defines a macro, see [the chapter about macros](/macros.md). |
 | .rept _count_ | Repeat a block of code substituing arguments. See [the chapter about macros](/macros.md). |
 | .endm | End of MACRO definition or REPT cycle. |
-| .block | Start of logical block. All labels, defined in this block, are local. It means you can’t reference them from outside the block. If you want to define a label globally, simply prefix it with ‘@’, like @LABEL: Good idea is to enclose INCLUDEd code into block. |
+| .block | Start of logical block. All labels, defined in this block, are local. It means you can’t reference them from outside the block. If you want to define a label globally, simply prefix it with ‘@’, like @LABEL: Good idea is to enclose INCLUDEd code into block. Block can have its own name, e.g. _.block serial_ It is usable with _.include_ directive to include only specific block from a file. Just use _.include library.a80/serial_ - syntax is _file/block_.|
 | .endblock | End of BLOCK. |
 |  | **Segments** |
 |  | _Segments has its own independent ORG pointers, so you can e.g. defined, that data segment begins at 8000h. You can mix data and code together as you need, but assembler keeps code in one chunk, data in another etc._ |
