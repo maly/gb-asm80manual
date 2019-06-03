@@ -57,6 +57,38 @@ Two parameters is OK. But what if you need the first DB is something like `db $d
  test {$de,$ad,$be,$ef}, $3456
 ```
 
+### Rich syntax (v2.5.2+)
+
+A macro can be defined by standard syntax as `.macro name`, or more consistent way as `name: .macro` or `name .macro`.
+
+### Formal parameters (v2.5.2+)
+
+Now you can name formal parameters too. For example - assume a macro cpymem for copy memory content. Such macro has three arguments - source, destination and length. The old form of macro has _mute parameters_, just referenced by its number:
+
+```
+.macro cpymem
+LD HL,%%1
+LD DE,%%2
+LD BC,%%3
+LDIR
+.endm
+```
+
+New formal parameters, introduced in revision 2.5.2, allows to write this:
+
+```
+.macro cpymem, src, dst, len
+LD HL,src
+LD DE,dst
+LD BC,len
+LDIR
+.endm
+```
+
+Preprocessor also check if the number of given parameters is sufficient for the macro, i.e. you cannot specify less parameters than formal, like `cpymem 100, 200`.
+
+All those named parameters are strictly local (in fact, they are replaced with its values before assembly phase).
+
 ##  {#processor-specific-syntax}
 
 
