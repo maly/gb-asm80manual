@@ -37,8 +37,9 @@
 |  | **Preprocessor** |
 | equ \(alias: =\) | EQUate. Must be preceded by a label. The argument must be a numeric expression, the result is assigned to the label. I.e. **VIDRAM equ $4000** |
 |  | **Conditional blocks** |
-| .if _cond_ | Contional assembly. The argument must be a numeric expression, a result of 0 is considered as false, any other as true. If the argument is true the following code is assembled until the end of the IF section is encountered, else is ignored. The IF section is ended with a ENDIF directive. IF can't be nested. |
+| .if _cond_ | Contional assembly. The argument must be a numeric expression, a result of 0 is considered as false, any other as true. If the argument is true the following code is assembled until the end of the IF section is encountered, else is ignored. The IF section is ended with a ENDIF directive. IFs can be nested (from version 2.5.2). |
 | .ifn _cond_ | IF NOT |
+| .else | The IF branch, valid for false condition. |
 | .endif | End of the IF block |
 |  | **Macros and blocks** |
 | .macro _macro\_name_ | Defines a macro, see [the chapter about macros](/macros.md). |
