@@ -19,6 +19,9 @@
 |  | **Data definition** |
 | db \(aliases: defb, fcb\) | Define Byte. The argument is a comma separated list of string literals or numeric expressions. The string literals are inserted in the object code, and the result of the numeric expression is inserted as a single byte, truncating it if needed. You can use DUP for entering N same values: DB 10 DUP \(123\) means "10 times value 123" |
 | dw \(aliases: defw, fdb\) | Define Word. The argument is a comma separated list of numeric expressions. Each numeric expression is evaluated as a two byte word and the result inserted in the proper "endianity". You can use DUP for entering N same values: DW 10 DUP \(123\) means "10 times value 123" |
+| dd | Define Double Word. The argument is a comma separated list of numeric expressions. Each numeric expression is evaluated as a four bytes and the result inserted in the proper "endianity". |
+| df | Define Float number. The argument is a comma separated list of numeric expressions. Each numeric expression is evaluated as an IEEE-754 32bit floating point number and the result inserted in the proper "endianity". |
+| dff | Define double precision Float number. The argument is a comma separated list of numeric expressions. Each numeric expression is evaluated as an IEEE-754 64bit floating point number and the result inserted in the proper "endianity". |
 | ds \(aliases: defm, defs, rmb\) | Define Space. Take one argument, which is the amount of space to define, in bytes. |
 | fill _value, length_ | Fill memory with a value. Take two arguments, the first is a value, the second is length of filled block \(byte count\). |
 | bsz _length_\(alias: zmb\) | Fill memory with a given count of zeros. |
