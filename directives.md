@@ -13,6 +13,9 @@
 | .pragma html | Makes HTML listing \(instead of LST\) |
 | .pragma segment | Make separate HEX files for cseg, dseg and eseg \(without this pragma are all of them in one HEX\) |
 | .pragma hexlen,X | Make HEX records X bytes long (e.g. _.pragma hexlen,8_ will make very short HEX line). Usable when some software needs exact length of a HEX record. |
+| .pragma nofloat | All float numbers are stripped down to the integer (just drop all the digits after the decimal point) |
+| .pragma float | Leave FP numbers intact |
+| .pragma roundfloat | All FP numbers are rounded to their nearest integer |
 | .binfrom _addr_ | Starting address for binary download, default is 0. _\(Only valid for "Download BIN" function in IDE\)_ |
 | .binto _addr_ | Last address for binary download \(this address WILL NOT BE INCLUDED in binary file\) Default is 65536. _\(Only valid for "Download BIN" function in IDE\)_ |
 | .error _message_ | Throws an error during compile phase. |
