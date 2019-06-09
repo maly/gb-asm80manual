@@ -8,13 +8,17 @@ String literals are written to the object file without any character set transla
 
 Blanks are significative only in string literals and when they separate lexical elements. Any number of blanks has the same meaning as one. A blank between operators and operands is allowed but no required except when the same character has other meaning as prefix \('$' and '%', for example\).
 
-### Literals
+### Numeric literals
 
 Numeric literals can be written in decimal, binary, octal and hexadecimal formats. Several formats are accepted to obtain compatibility with the source format of several assemblers.
 
 * A literal that begins with $ is a hexadecimal constant, except if the literal is only the $ symbol.
 
 * A literal that begins with a decimal digit can be a decimal, binary, octal or hexadecimal. If the digit is 0 and the following character is an X, the number is hexadecimal. If not, the suffix of the literal is examined: D means decimal, B binary, H hexadecimal and O or Q octal, in any other case, is taken as a decimal. Take care, `FFFFh`, for example, is not a hexadecimal constant, is an identifier, to write it with the suffix notation you must do it as `0FFFFh`.
+
+#### Floating point numbers (v2.5.3+)
+
+Only the decimal numbers can be float. You can use only the decimal point syntax, not the "E" syntax. Use .pragma directive to specify what to do with the float number.
 
 ### String literals
 
