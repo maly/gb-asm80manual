@@ -42,6 +42,7 @@
 | .dephase | End phase block. |
 |  | **Preprocessor** |
 | equ \(alias: =\) | EQUate. Must be preceded by a label. The argument must be a numeric expression, the result is assigned to the label. I.e. **VIDRAM equ $4000** |
+| .set | Variable equate. Must be preceded by a label. The argument must be a numeric expression, the result is assigned to the label. **The main difference between .set and equ is that the EQU cannot be redefined, but .SET can be overwrited later in the source code** |
 |  | **Conditional blocks** |
 | .if _cond_ | Contional assembly. The argument must be a numeric expression, a result of 0 is considered as false, any other as true. If the argument is true the following code is assembled until the end of the IF section is encountered, else is ignored. The IF section is ended with a ENDIF directive. IFs can be nested (from version 2.5.2). |
 | .ifn _cond_ | IF NOT |
